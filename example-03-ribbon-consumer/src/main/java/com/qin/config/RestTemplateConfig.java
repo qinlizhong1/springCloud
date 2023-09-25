@@ -1,6 +1,7 @@
 package com.qin.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ClientHttpRequestFactory;
@@ -13,6 +14,19 @@ public class RestTemplateConfig {
     @Bean
     public RestTemplate discoveryClientRestTemplate(@Qualifier("simpleClientHttpRequestFactory")
                                                                 ClientHttpRequestFactory factory){
+        return new RestTemplate(factory);
+    }
+
+    @Bean
+    public RestTemplate loadBalanceClientRestTemplate(@Qualifier("simpleClientHttpRequestFactory")
+                                                            ClientHttpRequestFactory factory){
+        return new RestTemplate(factory);
+    }
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate loadBalanceRestTemplate(@Qualifier("simpleClientHttpRequestFactory")
+                                                              ClientHttpRequestFactory factory){
         return new RestTemplate(factory);
     }
 

@@ -15,9 +15,11 @@ import java.util.Random;
 //使用discovery client  进行客户端调用,需要自己实现负载均衡
 @RestController
 public class DiscoveryClientController {
+    //1、注入DiscoveryClient实例
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    //2、注入LoadBalancerClient实例(需要先通过配置类创建该实例)
     @Autowired
     @Qualifier("discoveryClientRestTemplate")
     private RestTemplate restTemplate;
@@ -25,7 +27,7 @@ public class DiscoveryClientController {
     //http://localhost:8300/discovery
     @RequestMapping("discovery")
     public String discoveryClientCallGetPort(){
-        //得到的是RIBBONPRODUCER对应的所有实例，需要自己实现负载均衡
+        //3:得到的是RIBBONPRODUCER对应的所有实例地址信息，需要自己实现负载均衡去调用
         List<ServiceInstance> products = discoveryClient.getInstances("RIBBONPRODUCER");
 
         for (ServiceInstance serviceInstance : products){
@@ -36,12 +38,13 @@ public class DiscoveryClientController {
             System.out.println("instanceId:" + serviceInstance.getInstanceId());
         }
 
-        //自己实现负载均衡：模拟随机选择生产者服务一个实例
+        //4:自己实现负载均衡：模拟随机选择生产者服务一个实例
         int selector = new Random().nextInt(products.size());
 
-        String res = restTemplate.getForObject(products.get(selector).getUri(), String.class);
+        //5：调用
+        String res = restTemplate.getForObject("http://localhost:" + products.get(selector).getPort() + "/port", String.class);
 
-        return res;
+        return "【RibbonConsumer DiscoveryClient】--->" + res;
 
     }
 }
