@@ -8,19 +8,19 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.qin</groupId>
-    <artifactId>example-04-openfeign-consumer</artifactId>
+    <artifactId>example-04-openfeign-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>example-04-openfeign-consumer</name>
+    <name>example-04-openfeign-provider</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 

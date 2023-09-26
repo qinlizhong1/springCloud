@@ -16,9 +16,11 @@
         <module>example-01-eureka-client</module>
         <module>example-03-ribbon-producer</module>
         <module>example-03-ribbon-consumer</module>
-        <module>example-04-openfeign-producer</module>
+        <module>example-04-openfeign-provider</module>
         <module>example-04-openfeign-consumer</module>
         <module>example-06-gateway-server</module>
+        <module>alibaba-01-nacos-client</module>
+        <module>alibaba-02-nacos-config</module>
     </modules>
 
     <groupId>org.qin</groupId>

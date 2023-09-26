@@ -8,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.qin</groupId>
-    <artifactId>example-04-openfeign-producer</artifactId>
+    <artifactId>alibaba-01-nacos-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>example-04-openfeign-producer</name>
+    <name>alibaba-01-nacos-client</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
