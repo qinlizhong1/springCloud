@@ -19,8 +19,12 @@
         <module>example-04-openfeign-provider</module>
         <module>example-04-openfeign-consumer</module>
         <module>example-06-gateway-server</module>
-        <module>alibaba-01-nacos-client</module>
+        <module>alibaba-01-nacos-provider</module>
         <module>alibaba-02-nacos-config</module>
+        <module>alibaba-01-nacos-consumer</module>
+        <module>alibaba-03-sentinel-provider</module>
+        <module>alibaba-03-sentinel-consumer</module>
+        <module>alibaba-02-nacos-config-common</module>
     </modules>
 
     <groupId>org.qin</groupId>

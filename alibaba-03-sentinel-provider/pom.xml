@@ -7,21 +7,22 @@
         <artifactId>springCloud</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <groupId>com.qin</groupId>
-    <artifactId>alibaba-02-nacos-config</artifactId>
+    <artifactId>alibaba-03-sentinel-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>alibaba-02-nacos-config</name>
+    <name>alibaba-03-sentinel-provider</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
     </dependencies>
 
