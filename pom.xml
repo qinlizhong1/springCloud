@@ -25,6 +25,14 @@
         <module>alibaba-03-sentinel-provider</module>
         <module>alibaba-03-sentinel-consumer</module>
         <module>alibaba-02-nacos-config-common</module>
+        <module>linktrace-01-sleuth-server-a</module>
+        <module>linktrace-01-sleuth-server-b</module>
+        <module>linktrace-01-sleuth-server-c</module>
+        <module>linktrace-01-sleuth-server-d</module>
+        <module>linktrace-02-skywalking-server-a</module>
+        <module>linktrace-02-skywalking-server-b</module>
+        <module>linktrace-02-skywalking-server-c</module>
+        <module>linktrace-02-skywalking-server-d</module>
     </modules>
 
     <groupId>org.qin</groupId>
